@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+    musicbot:
+        image: deusmaxmachina/musicbot:latest
+        restart: unless-stopped
+        volumes:
+            - ./config:/musicbot/config
+            - /mnt/storage/musicbot_cache:/musicbot/audio_cache # optional. relocate the audio cache with this
